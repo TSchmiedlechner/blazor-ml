@@ -3,16 +3,23 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <LangVersion>7.3</LangVersion>
+    <ApplicationInsightsResourceId>/subscriptions/d0ffc7a6-5297-48ed-9849-e0dbde1903be/resourcegroups/BlazorML94e4/providers/microsoft.insights/components/BlazorML</ApplicationInsightsResourceId>
+    <ApplicationInsightsAnnotationResourceId>/subscriptions/d0ffc7a6-5297-48ed-9849-e0dbde1903be/resourcegroups/BlazorML94e4/providers/microsoft.insights/components/BlazorML</ApplicationInsightsAnnotationResourceId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0-preview2-final" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.App" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="0.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BlazorML.Client\BlazorML.Client.csproj" />
     <ProjectReference Include="..\BlazorML.Shared\BlazorML.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
   </ItemGroup>
 
 </Project>
